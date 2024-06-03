@@ -24,9 +24,10 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: List directory contents
-        run: ls -la
-        working-directory: ./dist
+      - name: Configure Git
+        run: |
+          git config --global user.email "devwithsmile007@gmail.com"
+          git config --global user.name "devwithsmile"
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
