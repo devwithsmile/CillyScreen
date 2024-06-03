@@ -24,7 +24,14 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: List directory contents
+        run: ls -la
+        working-directory: ./dist
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: List directory contents
+        run: ls -la
+        working-directory: ./dist
