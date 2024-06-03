@@ -22,4 +22,4 @@ CillyScreen is a movie browsing application built with React and Tailwind CSS. T
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/devwithsmile/CillyScreen.git
-   cd CillyScreen
+   cd CillyScreen 2
