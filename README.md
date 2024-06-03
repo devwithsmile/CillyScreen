@@ -2,6 +2,7 @@
 
 CillyScreen is a movie browsing application built with React and Tailwind CSS. The application allows users to explore now playing, popular, top-rated, and upcoming movies, with features like search and dark mode.
 
+
 ## Features
 
 - **Now Playing**: Browse movies currently playing in theaters.
