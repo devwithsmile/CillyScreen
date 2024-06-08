@@ -45,7 +45,7 @@ const Navbar1 = ({handleInputChange}) => {
           <span className="text-text_light dark:text-text_dark text-xl">CillyScreen</span>
         </div>
     
-        <button onClick={toggleDarkMode} className='ml-48 text-text_light dark:text-text_dark'>
+        <button onClick={toggleDarkMode} className='ml-40 text-text_light dark:text-text_dark'>
           <FontAwesomeIcon icon={isDarkmode ? faCloudSun : faCloudMoon} />
         </button>
 

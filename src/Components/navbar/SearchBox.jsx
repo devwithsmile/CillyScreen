@@ -4,7 +4,7 @@ import React from 'react'
 
 function SearchBox({handleInputChange}) {
     return (
-        <div className="relative mr-72 sm:w-3"> {/* Add margin to the right of the logo */}
+        <div className="relative mr-[490px] sm:w-3"> {/* Add margin to the right of the logo */}
             <input type="text"
                 placeholder="Search"
                 className="pl-8 pr-3 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 dark:bg-text_dark dark:text-text_light dark:placeholder-gray-400"
@@ -15,4 +15,4 @@ function SearchBox({handleInputChange}) {
     )
 }
 
-export default SearchBox
+export default SearchBox;
