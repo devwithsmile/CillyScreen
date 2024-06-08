@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './Components/navbar/Navbar';
-import Navbar1 from './Components/navbar/Navbar1';
+import Navbar from './Components/navbar/largeScreen/Navbar'
+import NavbarSmall from './Components/navbar/smallScreen/NavbarSmall';
 import { Routes, Route } from 'react-router-dom';
 import Now_playing from './Components/Now_playing';
 import Popular from './Components/Popular';
@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       {windowWidth < 768 ? (
-        <Navbar1 handleInputChange={handleInputChange} className="overflow-hidden" />
+        <NavbarSmall handleInputChange={handleInputChange} className="overflow-hidden" />
       ) : (
         <Navbar handleInputChange={handleInputChange} className="overflow-hidden" />
       )}

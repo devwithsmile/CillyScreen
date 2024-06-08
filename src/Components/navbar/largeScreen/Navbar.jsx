@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { faCloudSun, faCloudMoon, faSearch } from '@fortawesome/free-solid-svg-icons';
-import CillyScreenLogo from '../../assets/CillyScreen.png';
+import CillyScreenLogo from '../../../assets/CillyScreen.png';
 import { useSelector, useDispatch } from 'react-redux';
-import { enable, disable } from '../../slices/DarkMode/darkModeSlice';
+import { enable, disable } from '../../../slices/DarkMode/darkModeSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SearchBox from './SearchBox'
 function Navbar({ handleInputChange }) {

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
-import CillyScreenLogo from '../../assets/CillyScreen.png';
-import AllNavLinks1 from './AllNavlinks1';
+import CillyScreenLogo from '../../../assets/CillyScreen.png';
+import AllNavLinks1 from './AllNavLinksSmall';
 import { useDispatch, useSelector } from 'react-redux';
-import { enable, disable } from '../../slices/DarkMode/darkModeSlice';
+import { enable, disable } from '../../../slices/DarkMode/darkModeSlice';
+import SearchBoxSmall from './SearchBoxSmall';
 
 
-const Navbar1 = ({handleInputChange}) => {
+const NavbarSmall = ({ handleInputChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -40,11 +41,12 @@ const Navbar1 = ({handleInputChange}) => {
   return (
     <nav className="bg-slate-200 dark:bg-bg_dark px-1 text-text_light dark:text-text_dark py-2">
       <div className="flex justify-between items-center mt-1">
-        <div className="flex items-center">
-          <img src={CillyScreenLogo} alt="Logo" className="h-8 w-8 mr-2" />
+        <div className="flex flex-col items-center">
+          <img src={CillyScreenLogo} alt="Logo" className="h-10 w-10 mb-0" />
           <span className="text-text_light dark:text-text_dark text-xl">CillyScreen</span>
         </div>
-    
+
+        <SearchBoxSmall handleInputChange={handleInputChange}/>
         <button onClick={toggleDarkMode} className='ml-40 text-text_light dark:text-text_dark'>
           <FontAwesomeIcon icon={isDarkmode ? faCloudSun : faCloudMoon} />
         </button>
@@ -56,11 +58,11 @@ const Navbar1 = ({handleInputChange}) => {
       </div>
       {isOpen && (
         <div className="flex justify-between items-center">
-          <AllNavLinks1 toggleMenu = {toggleMenu}/>
+          <AllNavLinks1 toggleMenu={toggleMenu} />
         </div>
       )}
     </nav>
   );
 };
 
-export default Navbar1;
+export default NavbarSmall;
