@@ -47,7 +47,7 @@ const NavbarSmall = ({ handleInputChange }) => {
         </div>
 
         <SearchBoxSmall handleInputChange={handleInputChange}/>
-        <button onClick={toggleDarkMode} className='ml-40 text-text_light dark:text-text_dark'>
+        <button onClick={toggleDarkMode} className='ml-16 text-text_light dark:text-text_dark'>
           <FontAwesomeIcon icon={isDarkmode ? faCloudSun : faCloudMoon} />
         </button>
 
