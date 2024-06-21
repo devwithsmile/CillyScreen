@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SearchBox from './SearchBox'
 function Navbar({ handleInputChange }) {
 
-
     const [isDarkmode, setisDarkmode] = useState(false);
 
     useEffect(() => {
@@ -32,7 +31,6 @@ function Navbar({ handleInputChange }) {
             setisDarkmode(!isDarkmode)
         }
     };
-
     return (
         <nav className='bg-slate-200 dark:bg-neutral-900 flex justify-between py-1 shadow-sm text-text_light dark:text-text_dark dark:border-y-sky-500 dark:shadow-sm dark:shadow-gray-200 fixed w-full' >
             <div className="flex items-center"> {/* Container for logo, search button, and navigation links */}

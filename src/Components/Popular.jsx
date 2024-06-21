@@ -1,26 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import Card from './Card';
 import useFetchMovies from '../customeHooks/useFetchMovies';
+import SkeletonCard from './SkeletonCard';
 
-function Popular({ search_item }) {
+function NowPlaying({ search_item }) {
+  const [loading, setLoading] = useState(true);
+  const nowPlaying = useFetchMovies("now_playing", setLoading);
+  const searchedCards = nowPlaying.filter(movie => movie.title.toLowerCase().includes(search_item.toLowerCase()));
 
-  const popular = useFetchMovies("popular");
-  const searchedCards = popular.filter(movie => movie.title.toLowerCase().includes(search_item.toLowerCase()));
   return (
     <>
-      {searchedCards.map((movie) => (
-        <Card
-          key={movie.id}
-          name={movie.title}
-          overview={movie.overview}
-          img={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
-          releaseDate={movie.release_date}
-          voteAverage={movie.vote_average}
-        />
-      ))}
+      {loading ? (
+        Array.from({ length: 10 }).map((_, index) => (
+          <SkeletonCard key={index} />
+        ))
+      ) : (
+        searchedCards.map((movie) => (
+          <Card
+            key={movie.id}
+            name={movie.title}
+            overview={movie.overview}
+            img={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            releaseDate={movie.release_date}
+            voteAverage={movie.vote_average}
+          />
+        ))
+      )}
     </>
-
-  )
+  );
 }
 
-export default Popular
+export default NowPlaying;

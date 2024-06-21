@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
 import CillyScreenLogo from '../../../assets/CillyScreen.png';
-import AllNavLinks1 from './AllNavLinksSmall';
+import AllNavLinksSmall from './AllNavLinksSmall';
 import { useDispatch, useSelector } from 'react-redux';
 import { enable, disable } from '../../../slices/DarkMode/darkModeSlice';
 import SearchBoxSmall from './SearchBoxSmall';
@@ -58,7 +58,7 @@ const NavbarSmall = ({ handleInputChange }) => {
       </div>
       {isOpen && (
         <div className="flex justify-between items-center">
-          <AllNavLinks1 toggleMenu={toggleMenu} />
+          <AllNavLinksSmall toggleMenu={toggleMenu} />
         </div>
       )}
     </nav>
