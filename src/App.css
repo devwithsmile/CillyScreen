@@ -6,3 +6,38 @@
 .website-name{
     color: inherit;
 }
+
+
+/* modal  */
+.modal-backdrop {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+
+.modal-content {
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out;
+}
+
+.modal-content.show {
+    transform: scale(1);
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-animate {
+    animation: expand 0.2s ease-in-out;
+}

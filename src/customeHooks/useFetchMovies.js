@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+const apiKey = 'a8d22016f84542b58963902b8d436266';
 
 function useFetchMovies(url_parameter, setLoading) {
+
   const [movies, setMovies] = useState([]);
-  const apiKey = 'a8d22016f84542b58963902b8d436266';
   const url = `https://api.themoviedb.org/3/movie/${url_parameter}?api_key=${apiKey}`;
 
   useEffect(() => {
@@ -22,7 +23,6 @@ function useFetchMovies(url_parameter, setLoading) {
           setTimeout(() => {
             setLoading(false);
           }, 1000); // Simulate loading delay
-          console.log("useEffect " + url_parameter);
         })
         .catch(error => {
           console.error(error);
