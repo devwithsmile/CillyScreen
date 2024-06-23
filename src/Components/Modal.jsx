@@ -39,11 +39,9 @@ const Modal = ({ show, onClose, videoKey }) => {
 
     return ReactDOM.createPortal(
         <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 modal-backdrop ${show ? 'show' : ''}`}>
-            <div ref={modalRef} className={`bg-bg_light dark:bg-bg_dark rounded-lg shadow-lg overflow-hidden modal-content ${show ? 'show' : ''}`}>
-                <div className="p-4">
-                    {/* Removed Close button */}
-                </div>
-                <div className="p-4">
+            <div ref={modalRef} className={`bg-bg_light dark:bg-bg_dark rounded-lg shadow-lg overflow-hidden modal-content ${show ? 'show' : ''} `}>
+            
+                <div className="p-2">
                     {videoKey ? (
                         <iframe
                             width="560"
