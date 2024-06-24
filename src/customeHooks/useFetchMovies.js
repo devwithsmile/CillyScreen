@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 const apiKey = 'a8d22016f84542b58963902b8d436266';
+const country = "IN";
 
 function useFetchMovies(url_parameter, setLoading) {
 
   const [movies, setMovies] = useState([]);
-  const url = `https://api.themoviedb.org/3/movie/${url_parameter}?api_key=${apiKey}`;
+  const url = `https://api.themoviedb.org/3/movie/${url_parameter}?api_key=${apiKey}&with_origin_country=${country}`;
 
   useEffect(() => {
     setLoading(true);

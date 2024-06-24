@@ -36,7 +36,7 @@ function App() {
       ) : (
         <Navbar handleInputChange={handleInputChange} className="overflow-hidden" />
       )}
-      <div className="container mx-auto py-2 text-text_light dark:text-text_dark w-[98.5%]">
+      <div className="container mx-auto py-4 text-text_light dark:text-text_dark w-[98.5%]">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:mt-[4%]">
           <Routes>
             <Route path='/' element={<Now_playing search_item={searchItem} />}></Route>
