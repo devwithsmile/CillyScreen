@@ -39,13 +39,14 @@ const Modal = ({ show, onClose, videoKey }) => {
 
     return ReactDOM.createPortal(
         <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 modal-backdrop ${show ? 'show' : ''}`}>
-            <div ref={modalRef} className={`bg-bg_light dark:bg-bg_dark rounded-lg shadow-lg overflow-hidden modal-content ${show ? 'show' : ''}`}>
+            <div ref={modalRef} className={`lg:w-[57%] sm:w-[21rem] bg-bg_light dark:bg-bg_dark rounded-lg shadow-lg overflow-hidden modal-content ${show ? 'show' : ''}`}>
             
                 <div className="p-2">
                     {videoKey ? (
                         <iframe
-                            width="560"
-                            height="315"
+                            // width="560"
+                            // height="315"
+                            className=' sm:w-[21rem] sm:h-44 lg:w-[35rem] lg:h-[20rem]'
                             src={`https://www.youtube.com/embed/${videoKey}`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
