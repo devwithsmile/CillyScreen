@@ -46,7 +46,7 @@ const Modal = ({ show, onClose, videoKey }) => {
                         <iframe
                             // width="560"
                             // height="315"
-                            className=' sm:w-[21rem] sm:h-44 lg:w-[35rem] lg:h-[20rem]'
+                            className=' sm:w-[21rem] sm:h-44 lg:w-[44rem] lg:h-[20rem]'
                             src={`https://www.youtube.com/embed/${videoKey}`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen

@@ -32,7 +32,7 @@ function Navbar({ handleInputChange }) {
         }
     };
     return (
-        <nav className='bg-slate-200 dark:bg-neutral-900 flex justify-between py-1 shadow-sm text-text_light dark:text-text_dark dark:border-y-sky-500 dark:shadow-sm dark:shadow-gray-200 fixed w-full z-10' >
+        <nav className='bg-slate-200 dark:bg-neutral-900 flex justify-between py-1 shadow-sm text-text_light dark:text-text_dark dark:border-y-sky-500 dark:shadow-sm dark:shadow-gray-200 fixed w-full' >
             <div className="flex items-center"> {/* Container for logo, search button, and navigation links */}
 
                 <NavLink to='/'> <img src={CillyScreenLogo} alt="CillyScreen Logo" className="h-12" /></NavLink>
